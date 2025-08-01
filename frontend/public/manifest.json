@@ -1,0 +1,17 @@
+{
+  "short_name": "VR-RP",
+  "name": "VR-RP - Virtual Reality Role-Playing Platform",
+  "description": "Immerse yourself in the ultimate Virtual Reality Role-Playing platform with AI-powered characters",
+  "icons": [
+    {
+      "src": "vr-rp-logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0ea5e9",
+  "background_color": "#0f172a",
+  "orientation": "portrait-primary"
+}
