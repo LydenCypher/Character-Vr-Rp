@@ -9,7 +9,7 @@ import uuid
 from datetime import datetime
 
 # Configuration
-BASE_URL = "https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com/api"
+BASE_URL = "https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com/api"
 HEADERS = {"Content-Type": "application/json"}
 
 def test_core_endpoints():

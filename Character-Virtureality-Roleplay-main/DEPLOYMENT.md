@@ -40,8 +40,8 @@ Your Character VR RP application is now fully functional and ready for deploymen
 sudo supervisorctl restart all
 
 # Access the application
-Frontend: https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com
-Backend API: https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com/api
+Frontend: https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com
+Backend API: https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com/api
 ```
 
 ### Option 2: GitHub Repository Setup
@@ -77,9 +77,9 @@ The application is container-ready and can be deployed using Docker Compose or K
 ## 🌐 Live Application
 
 Your application is currently running and accessible at:
-- **Frontend**: https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com
-- **Backend API**: https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com/api/health
-- **API Docs**: https://c875baeb-46dd-41ee-84a2-a50674acbba0.preview.emergentagent.com/docs
+- **Frontend**: https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com
+- **Backend API**: https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com/api/health
+- **API Docs**: https://af3f2199-c583-4856-a9b6-279b9694a559.preview.emergentagent.com/docs
 
 ## 📋 Final Checklist
 
