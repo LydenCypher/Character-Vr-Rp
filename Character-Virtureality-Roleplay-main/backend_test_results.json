@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "passed": 20,
+    "failed": 4,
+    "total": 24
+  },
+  "test_results": [
+    {
+      "test": "Health Check",
+      "success": true,
+      "message": "API is healthy: Character VR RP API is running",
+      "timestamp": "2025-07-30T10:36:42.734213",
+      "details": null
+    },
+    {
+      "test": "Create User",
+      "success": true,
+      "message": "User created successfully with ID: f390bede-fe4b-4267-980a-495992545373",
+      "timestamp": "2025-07-30T10:36:43.310117",
+      "details": null
+    },
+    {
+      "test": "Get User",
+      "success": true,
+      "message": "User retrieved successfully: alice_wonderland",
+      "timestamp": "2025-07-30T10:36:43.867148",
+      "details": null
+    },
+    {
+      "test": "Auth Callback (Invalid Session)",
+      "success": false,
+      "message": "Auth callback unexpected status 500: {\"detail\":\"Authentication error: \"}",
+      "timestamp": "2025-07-30T10:36:44.521350",
+      "details": null
+    },
+    {
+      "test": "AI Integration Direct",
+      "success": false,
+      "message": "OpenAI API error: Error: Failed to generate chat completion: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: demo_key********lder. You can find your API key at https://platform.openai.com/account/api-keys.",
+      "timestamp": "2025-07-30T10:36:48.350295",
+      "details": null
+    },
+    {
+      "test": "Full AI Chat Flow",
+      "success": true,
+      "message": "Complete AI chat flow successful",
+      "timestamp": "2025-07-30T10:36:49.218646",
+      "details": "AI Response preview: Hello! I'm Luna the Mystic. I'd love to chat with you, but the AI service isn't configured yet. Plea..."
+    },
+    {
+      "test": "Multi-turn Conversation",
+      "success": true,
+      "message": "Multi-turn conversation successful with context memory",
+      "timestamp": "2025-07-30T10:36:49.278827",
+      "details": null
+    },
+    {
+      "test": "Persona AI Chat Integration",
+      "success": true,
+      "message": "AI chat with persona context successful. Persona: Alex the Explorer",
+      "timestamp": "2025-07-30T10:36:49.849396",
+      "details": "AI Response preview: Hello! I'm Luna the Mystic. I'd love to chat with you, but the AI service isn't configured yet. Plea..."
+    },
+    {
+      "test": "Create Character (No Auth)",
+      "success": true,
+      "message": "Character creation correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:50.398230",
+      "details": null
+    },
+    {
+      "test": "Get Characters",
+      "success": true,
+      "message": "Retrieved 1 characters (including our test character)",
+      "timestamp": "2025-07-30T10:36:50.950390",
+      "details": null
+    },
+    {
+      "test": "Get Character by ID",
+      "success": true,
+      "message": "Character retrieved successfully: Luna the Mystic",
+      "timestamp": "2025-07-30T10:36:51.500244",
+      "details": null
+    },
+    {
+      "test": "Create Conversation (No Auth)",
+      "success": true,
+      "message": "Conversation creation correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:52.051498",
+      "details": null
+    },
+    {
+      "test": "Get User Conversations",
+      "success": true,
+      "message": "Retrieved 2 conversations (including our test conversation)",
+      "timestamp": "2025-07-30T10:36:52.601593",
+      "details": null
+    },
+    {
+      "test": "AI Providers",
+      "success": false,
+      "message": "OpenAI provider not available or not found",
+      "timestamp": "2025-07-30T10:36:53.153101",
+      "details": null
+    },
+    {
+      "test": "AI Chat (No Auth)",
+      "success": true,
+      "message": "AI chat correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:53.706242",
+      "details": null
+    },
+    {
+      "test": "Get Conversation Messages",
+      "success": true,
+      "message": "Retrieved 4 messages from conversation",
+      "timestamp": "2025-07-30T10:36:54.279355",
+      "details": null
+    },
+    {
+      "test": "Different Chat Modes",
+      "success": false,
+      "message": "No additional chat modes working",
+      "timestamp": "2025-07-30T10:36:54.882150",
+      "details": null
+    },
+    {
+      "test": "Get User Personas (No Auth)",
+      "success": true,
+      "message": "Personas endpoint correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:55.431049",
+      "details": null
+    },
+    {
+      "test": "Create Persona",
+      "success": true,
+      "message": "Persona creation endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:55.988107",
+      "details": null
+    },
+    {
+      "test": "Get User Personas",
+      "success": true,
+      "message": "Get personas endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:56.541116",
+      "details": null
+    },
+    {
+      "test": "Get Specific Persona",
+      "success": true,
+      "message": "Get specific persona endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:57.091419",
+      "details": null
+    },
+    {
+      "test": "Update Persona",
+      "success": true,
+      "message": "Update persona endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:57.645512",
+      "details": null
+    },
+    {
+      "test": "Get Default Persona",
+      "success": true,
+      "message": "Get default persona endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:58.195992",
+      "details": null
+    },
+    {
+      "test": "Set Default Persona",
+      "success": true,
+      "message": "Set default persona endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:58.748876",
+      "details": null
+    },
+    {
+      "test": "Delete Persona Protection",
+      "success": true,
+      "message": "Delete persona endpoint exists and correctly requires authentication",
+      "timestamp": "2025-07-30T10:36:59.331201",
+      "details": null
+    }
+  ],
+  "test_data": {
+    "user_id": "f390bede-fe4b-4267-980a-495992545373",
+    "username": "alice_wonderland",
+    "email": "alice.wonderland.e76021f3@example.com",
+    "character_id": "48db8321-0e3e-4da9-9d48-2f2c59c50375",
+    "character_name": "Luna the Mystic",
+    "conversation_id": "f5269f9e-ceb1-45ab-838b-bc0fb620c929",
+    "session_id": "test_session_5154aa7c"
+  }
+}
