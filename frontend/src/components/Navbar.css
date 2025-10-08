@@ -74,20 +74,88 @@
   color: #ff6b6b;
 }
 
-.navbar-btn {
-  padding: 10px 24px;
-  background: #ffffff;
-  color: #0a0a0b;
-  border: none;
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-menu-wrapper {
+  position: relative;
+}
+
+.user-avatar-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+  background: none;
+}
+
+.user-avatar-btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  background: #1a1a1b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
   transition: all 0.2s;
 }
 
-.navbar-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-1px);
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.mobile-menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -95,15 +163,35 @@
     padding: 12px 20px;
   }
 
-  .navbar-links {
-    gap: 4px;
+  .mobile-menu-btn {
+    display: flex;
   }
 
-  .nav-link span {
-    display: none;
+  .navbar-links {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 11, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    gap: 8px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar-links.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
   }
 
   .nav-link {
-    padding: 10px;
+    width: 100%;
+    padding: 12px 16px;
   }
 }
