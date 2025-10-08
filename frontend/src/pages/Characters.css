@@ -242,6 +242,16 @@
     padding: 40px 20px;
   }
 
+  .characters-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-character-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .page-title {
     font-size: 36px;
   }
