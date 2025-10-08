@@ -138,6 +138,18 @@
   text-decoration: none;
   transition: all 0.3s;
   overflow: hidden;
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .character-card::before {
