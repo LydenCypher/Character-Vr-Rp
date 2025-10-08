@@ -6,6 +6,13 @@ import './VideoHub.css';
 
 const VideoHub = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categories = ['All', 'Tutorial', 'Education', 'Review'];
+
+  const filteredVideos = selectedCategory === 'All' 
+    ? mockVideos 
+    : mockVideos.filter(v => v.category === selectedCategory);
 
   const openVideo = (video) => {
     setSelectedVideo(video);
@@ -25,15 +32,33 @@ const VideoHub = () => {
           <p className="video-subtitle">Discover AI and music creation content</p>
         </div>
 
+        <div className="video-categories">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={`video-category-chip ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="videos-grid">
-          {mockVideos.map(video => (
-            <div key={video.id} className="video-card" onClick={() => openVideo(video)}>
+          {filteredVideos.map((video, index) => (
+            <div 
+              key={video.id} 
+              className="video-card" 
+              onClick={() => openVideo(video)}
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
               <div className="video-thumbnail-wrapper">
                 <img src={video.thumbnail} alt={video.title} className="video-thumbnail" />
                 <div className="video-overlay">
                   <Play size={48} fill="white" />
                 </div>
                 <div className="video-duration">{video.duration}</div>
+                <div className="video-category-badge">{video.category}</div>
               </div>
 
               <div className="video-info">
